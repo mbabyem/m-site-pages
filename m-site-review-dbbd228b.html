@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>开云 · 细微之处的明澈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f5f9fc;
+            color: #1f2c38;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            max-width: 720px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 8px 24px rgba(36, 120, 108, 0.06), 0 2px 6px rgba(0, 30, 25, 0.02);
+            border: 1px solid rgba(74, 150, 140, 0.12);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .grid-card:hover {
+            box-shadow: 0 12px 32px rgba(36, 120, 108, 0.12);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0f3d3a;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #4b6b67;
+            border-left: 3px solid #3b9b8e;
+            padding-left: 1rem;
+            margin: 0.5rem 0 1.2rem 0;
+            font-weight: 380;
+        }
+
+        .article-title {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #1a4a45;
+            margin-bottom: 0.2rem;
+        }
+
+        .meta-line {
+            font-size: 0.85rem;
+            color: #63817c;
+            margin-bottom: 1.2rem;
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-line span {
+            background: #deece9;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-weight: 380;
+        }
+
+        .pull-quote {
+            background: #dcefea;
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.6rem 0;
+            color: #1d4b45;
+            font-style: normal;
+            border-left: 5px solid #338a7c;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .pull-quote::before {
+            content: "※ ";
+            color: #2f887b;
+            font-weight: 400;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.6rem 0 0.4rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(75, 150, 137, 0.15);
+            font-size: 0.95rem;
+        }
+
+        .feature-item strong {
+            color: #1c6c5f;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        a {
+            color: #1a7b6b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 420;
+        }
+
+        a:hover {
+            border-bottom-color: #1a7b6b;
+            color: #0d5c4f;
+        }
+
+        .site-link-sentence {
+            background: #e5f2ef;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin: 0.4rem 0 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-summary {
+            margin-top: 1.8rem;
+        }
+
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(55, 120, 110, 0.1);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 480;
+            color: #1b5a50;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            color: #3a5f59;
+            font-size: 0.95rem;
+            padding-left: 0.6rem;
+        }
+
+        .footer-note {
+            margin-top: auto;
+            padding-top: 2.2rem;
+            font-size: 0.85rem;
+            color: #5a7c76;
+            border-top: 1px solid rgba(55, 130, 115, 0.1);
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.4rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .article-title {
+                font-size: 1.35rem;
+            }
+            .grid-card {
+                padding: 1.4rem 1.2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .pull-quote {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-card">
+        <h1>开云</h1>
+        <div class="subhead">一个关于清晰、沉淀与日常视野的笔记</div>
+        <p style="font-size:0.95rem; color:#3a625c;">
+            我们常被喧嚣淹没，却忘了云层之上的天空始终明净。这个站点并不追逐潮流，而是收集那些让呼吸变慢的片刻。
+        </p>
+    </div>
+
+    <div class="grid-card">
+        <div class="article-title">云开之后</div>
+        <div class="meta-line">
+            <span>随笔</span>
+            <span>片刻</span>
+            <span>2025 · 春</span>
+        </div>
+        <p>
+            几年前在北方小镇，傍晚光线从厚云缝隙中泻下，像一道温吞的探照灯。田野、电线杆、远处屋顶都被镀上一层清冷的金。那一刻我忽然理解，所谓“开云”并非指驱散什么，而是让原本就在那里的光，获得一个被看见的开口。
+        </p>
+        <p>
+            后来我把这个意象带到生活里——与其奋力拨开迷雾，不如等待一个角度。日常中那些微小的通透感：清晨煮水时蒸汽散去的瞬间，读完一页书后抬头看到窗外的树影，或者只是把手机放下，盯着空白墙壁发一会呆。这些都不是答案，但它们是出口。
+        </p>
+        <div class="pull-quote">
+            云不是阻碍，是光的慢镜头。
+        </div>
+        <p>
+            网站 <a href="https://m-site-kai-yun.com">开云</a> 便是在这种想法下慢慢成形的。它没有要传达的宏论，更像一本翻开的笔记——记录那些让空气变得清澈的片段，无论是一段引文、一张留白很多的照片，还是一个被重新发现的旧念头。
+        </p>
+    </div>
+
+    <div class="grid-card">
+        <div class="article-title" style="font-size:1.2rem; margin-bottom:0.8rem;">一些散落的切片</div>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>阅读间隙</strong>
+                把一本书读薄，再把一句读厚。
+            </div>
+            <div class="feature-item">
+                <strong>静止的观察</strong>
+                看云，看水纹，看一只猫伸懒腰。
+            </div>
+            <div class="feature-item">
+                <strong>短途记录</strong>
+                步行可至的风景，往往最耐看。
+            </div>
+            <div class="feature-item">
+                <strong>回音</strong>
+                旧信、对话片段、忘记来源的句子。
+            </div>
+        </div>
+        <p style="margin-top:1.2rem; font-size:0.95rem;">
+            这些主题彼此独立，又都绕着同一个轴心——不是向外寻找，而是向内澄清。
+        </p>
+    </div>
+
+    <div class="grid-card faq-summary">
+        <div style="font-weight:480; margin-bottom:0.8rem; color:#1b5a50;">可能你会想问</div>
+        <div class="faq-item">
+            <div class="faq-q">内容更新频繁吗？</div>
+            <div class="faq-a">不定期。更像是自然浮现的碎片，有时密集，有时沉默很久。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">我需要注册或登录吗？</div>
+            <div class="faq-a">完全不需要。它只是一个公开的、安静的角落，没有会员系统。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">可以分享其中的内容吗？</div>
+            <div class="faq-a">当然。如果引用，注明来自 <a href="https://m-site-kai-yun.com" style="border-bottom:1px dotted;">开云</a> 即可。</div>
+        </div>
+    </div>
+
+    <div class="grid-card" style="background:rgba(235, 246, 242, 0.8);">
+        <p style="margin-bottom:0.4rem;">
+            如果你偶然路过，不妨待一会儿。泡茶、听雨、翻几页旧书。或者，只是让目光停在某段文字上，等它自己变轻。
+        </p>
+        <div style="margin-top:0.8rem; font-size:0.9rem; color:#3a6b63;">
+            —— 更多时候，<a href="https://m-site-kai-yun.com">开云</a> 什么也不说，只是在那里。
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <span>写于一个光线柔和的午后 · 保持平静</span>
+    </div>
+
+</body>
+</html>
