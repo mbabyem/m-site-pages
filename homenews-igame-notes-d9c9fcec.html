@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 一个认真的游戏信息站</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf8;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "Georgia", serif;
+      color: #1e1e1a;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+
+    .page {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 0.25rem;
+    }
+
+    /* ——— hero ——— */
+    .hero {
+      margin-bottom: 3.5rem;
+      padding: 3.2rem 1.2rem 2.8rem;
+      background: #f2efe9;
+      border-radius: 3px;
+      text-align: center;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+      color: #2b2b27;
+    }
+
+    .hero .sub {
+      font-size: 0.95rem;
+      color: #6b6a63;
+      letter-spacing: 3px;
+      border-top: 1px solid #dad7cf;
+      display: inline-block;
+      padding-top: 0.6rem;
+    }
+
+    /* ——— 背景说明 ——— */
+    .intro-block {
+      margin-bottom: 2.8rem;
+    }
+
+    .intro-block h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      border-left: 4px solid #b8a48a;
+      padding-left: 0.8rem;
+      margin-bottom: 1rem;
+      color: #2f2e2a;
+    }
+
+    .intro-block p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2a2a25;
+    }
+
+    /* ——— 三段式自然介绍 ——— */
+    .feature-grid {
+      margin: 3rem 0 2.5rem;
+    }
+
+    .feature-item {
+      margin-bottom: 2.4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e6e3db;
+    }
+
+    .feature-item:last-child {
+      border-bottom: none;
+    }
+
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      color: #3a3a34;
+    }
+
+    .feature-item p {
+      font-size: 0.98rem;
+      color: #3e3d38;
+    }
+
+    /* ——— 页尾 ——— */
+    .footer-note {
+      margin-top: 3.5rem;
+      padding: 2rem 0 1.5rem;
+      border-top: 1px solid #dad7cf;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #5a5952;
+    }
+
+    .footer-note a {
+      color: #544c3e;
+      text-decoration: underline;
+      text-decoration-thickness: 0.5px;
+      text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+
+    .footer-note a:hover {
+      color: #857a67;
+    }
+
+    /* ——— 辅助 ——— */
+    .small-meta {
+      font-size: 0.8rem;
+      color: #8e8b80;
+      margin-top: 0.3rem;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+      .page {
+        margin: 1.8rem auto;
+      }
+      .hero {
+        padding: 2.2rem 0.8rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏</h1>
+    <div class="sub">一个细读游戏的门廊</div>
+  </div>
+
+  <!-- 背景说明 -->
+  <div class="intro-block">
+    <h2>从「玩」到「理解」</h2>
+    <p>
+      人们谈论游戏时，常常只停留在消遣或竞技的层面。但游戏作为一种媒介，早已承载了叙事、策略、审美甚至社会观察的可能。<strong>爱游戏</strong>所关注的，正是这些被忽略的层次——不追逐热点，不制造焦虑，只是安静地记录和梳理那些真正值得被讨论的作品与现象。
+    </p>
+    <p>
+      这个网站诞生于一种朴素的愿望：让好游戏被看见，让认真对待游戏的人有一个可以慢慢读的地方。无论是独立开发者的诚意之作，还是经典作品的再发现，这里都愿意留出篇幅。
+    </p>
+  </div>
+
+  <!-- 三段自然介绍 -->
+  <div class="feature-grid">
+
+    <div class="feature-item">
+      <h3>一种整理，而非资讯</h3>
+      <p>
+        资讯是速朽的，但整理可以留下脉络。<a href="https://homenews-igame.com">爱游戏</a>尝试用专题的形式，将散落在时间线里的作品、评论与幕后拉回到同一个桌面上。每篇内容都经过重新编辑与交叉核对，力求干净、可靠。
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <h3>不止于评测</h3>
+      <p>
+        很多网站只关心分数和推荐值，但这里更在意游戏本身的逻辑与表达。比如，一个看似简单的休闲游戏，它的交互节奏为何让人舒适？一篇看似枯燥的开发日志，又藏了多少设计上的取舍。这些细小的洞察，才是值得反复看的。
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <h3>给静下来的人</h3>
+      <p>
+        如果你已经厌倦了标题党、排行榜和“必玩清单”，也许适合在某个晚上打开这个站点。没有弹窗，没有催促，只有一篇篇认真写下的文字。我们始终相信，好的内容不需要大声叫卖，它自己会找到读者。
+      </p>
+    </div>
+
+  </div>
+
+  <!-- 页尾 + 链接 -->
+  <div class="footer-note">
+    <p>这里没有广告，不设付费墙，只是一个关于游戏的安静角落。</p>
+    <p style="margin-top: 1rem;">
+      若想了解更多，不妨从 <a href="https://homenews-igame.com">爱游戏</a> 的主页开始。
+    </p>
+    <p class="small-meta">—— 认真整理，慢慢更新 ——</p>
+  </div>
+
+</div>
+</body>
+</html>
